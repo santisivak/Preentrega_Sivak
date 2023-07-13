@@ -9,8 +9,8 @@
   padding-inline-start: 5rem;
   padding-inline-end: 5rem;
 }
-.containerCategories {
+.categories {
   display: flex;
   list-style: none;
-  gap: 30px;
+  gap: 60px;
 }

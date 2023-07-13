@@ -1,20 +1,26 @@
-import { useState } from "react";
-import Navbar from "./components/layout/navbar/Navbar";
-import HomeContainer from "./components/pages/home/HomeContainer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ItemListContainer from "./components/pages/itemList/ItemListContainer";
+import ItemDetalleContainer from "./components/pages/itemDetalle/ItemDetalleContainer";
+import CartContainer from "./components/pages/cart/CartContainer";
+import Navbar from "./components/layout/navbar/Navbar";
 
 function App() {
-  const [nombre, setNombre] = useState("Santi");
-
-  const saludo = "Hola, espero que tengas un buen día";
-
   return (
-    <div>
-      <Navbar />
-      <button onClick={() => setNombre("Ruben")}>Cambiar nombre</button>
-      <HomeContainer nombre={nombre} />
-      <ItemListContainer saludo={saludo} />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Navbar />}>
+          <Route path="/" element={<ItemListContainer />} />
+          <Route
+            path="/category/:categoryName"
+            element={<ItemListContainer />}
+          />
+          <Route path="/itemDetail/:id" element={<ItemDetalleContainer />} />
+          <Route path="/cart" element={<CartContainer />} />
+        </Route>
+
+        <Route path="*" element={<h1>404 - Not Found</h1>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

@@ -1,0 +1,38 @@
+export const products = [
+  {
+    id: 1,
+    title: "Pulsera de Plata",
+    price: 6000,
+    stock: 5,
+    description: "Esta es la descripcion",
+    category: "plata",
+    img: "https://res.cloudinary.com/doxzdfppp/image/upload/v1689117608/curso-react/pulsera_h3itfz.jpg",
+  },
+  {
+    id: 2,
+    title: "Anillo Plata",
+    price: 2500,
+    stock: 2,
+    description: "Esta es la descripcion",
+    category: "plata",
+    img: "https://res.cloudinary.com/doxzdfppp/image/upload/v1689117608/curso-react/anilloPlata_y4hyba.jpg",
+  },
+  {
+    id: 3,
+    title: "Anillo de Oro",
+    price: 10500,
+    stock: 6,
+    description: "Esta es la descripcion",
+    category: "oro",
+    img: "https://res.cloudinary.com/doxzdfppp/image/upload/v1689117608/curso-react/anillo_fupgxa.jpg",
+  },
+  {
+    id: 4,
+    title: "Pulsera de Oro",
+    price: 12000,
+    stock: 3,
+    description: "Esta es la descripcion",
+    category: "oro",
+    img: "https://res.cloudinary.com/doxzdfppp/image/upload/v1689117608/curso-react/pulseraOro_hjq43h.png",
+  },
+];
